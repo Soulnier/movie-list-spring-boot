@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: Movie List
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/movie_list
+    username: postgres
+    password: qwe12rt12
