@@ -1,11 +1,9 @@
 package org.example.movielist.entity;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 @Getter
-@RequiredArgsConstructor
+@AllArgsConstructor
 public enum Status {
     NO_STATUS("Нет статуса"),
     PLANNED("Запланировано"),
