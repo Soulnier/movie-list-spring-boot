@@ -6,3 +6,17 @@ spring:
     url: jdbc:postgresql://localhost:5432/movie_list
     username: postgres
     password: qwe12rt12
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        defer-datasource-initialization: true
+
+  sql:
+    init:
+      mode: always

@@ -15,6 +15,7 @@ import java.util.*;
 
 @Data
 @Entity
+@Table(name = "users")
 @AllArgsConstructor
 @NoArgsConstructor
 public class User implements UserDetails {
@@ -30,7 +31,7 @@ public class User implements UserDetails {
 
     @NotNull
     @ToString.Exclude
-    @Size(min = 5, max = 20)
+    @Size(min = 8, max = 255)
     private String password;
 
     @Email

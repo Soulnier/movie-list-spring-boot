@@ -5,15 +5,17 @@ import jakarta.validation.Constraint;
 import jakarta.validation.constraints.*;
 import lombok.*;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 @Entity
 @Data
+@Table(name = "movies")
 @NoArgsConstructor
 @AllArgsConstructor
-public class Movie {
+public class Movie implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -47,7 +49,7 @@ public class Movie {
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     @JoinTable(
-            name = "genre_movie",
+            name = "genres_movies",
             joinColumns = @JoinColumn(name = "movie_id"),
             inverseJoinColumns = @JoinColumn(name = "genre_id")
     )

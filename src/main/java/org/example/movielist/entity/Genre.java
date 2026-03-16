@@ -11,6 +11,7 @@ import java.util.List;
 
 @Data
 @Entity
+@Table(name = "genres")
 @NoArgsConstructor
 @AllArgsConstructor
 public class Genre {
@@ -22,6 +23,6 @@ public class Genre {
     @NotNull
     private String name;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "genres")
     private List<Movie> movies = new ArrayList<>();
 }

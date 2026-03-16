@@ -9,4 +9,4 @@ INSERT INTO genres (name) VALUES
                               ('Детектив'),
                               ('Приключения'),
                               ('Фэнтези')
-    ON CONFLICT (name) DO NOTHING;
+ON CONFLICT (name) DO NOTHING;
